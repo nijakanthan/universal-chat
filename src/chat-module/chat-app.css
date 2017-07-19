@@ -1,0 +1,83 @@
+chat-container div.chat {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 2px 3px 6px #aaa;
+    cursor: pointer;
+}
+
+chat-container div.chat.bottom-right {
+    bottom: 2%;
+    right: 2%;
+}
+
+chat-container div.chat.top-right {
+    top: 2%;
+    right: 2%;
+}
+
+chat-container div.chat.bottom-left {
+    bottom: 2%;
+    left: 2%;
+}
+
+chat-container div.chat.top-left {
+    top: 2%;
+    left: 2%;
+}
+
+chat-container div.chat.animated {
+    animation-iteration-count: infinite;
+    animation-name: unichatbounce;
+    transform-origin: center bottom;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes unichatbounce {
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        transform: translateZ(0);
+    }
+    43% {
+        transform: translate3d(0, -30px, 0);
+    }
+    43%,
+    70% {
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+    }
+    70% {
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+chat-container div.chat div.icon {
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 50%;
+    height: 40%;
+    margin: 25% auto;
+    width: 50%;
+}
+
+chat-container div.chat div.icon:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #FFFFFF;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -5px;
+    margin-bottom: -5px;
+    transform: rotateZ(10deg);
+}

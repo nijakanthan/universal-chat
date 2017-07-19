@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="samplechat">
 
 <head>
     <meta charset="utf-8">
     <meta name="Nijanthan L." content="">
     <!-- <link rel="icon" type="image/png" href="/assets/images/logo.png" /> -->
     <title>Universal Chat</title>
+
+    <link href="chat-module/chat-app.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <h1>Sample Chat</h1>
+    <chat-container></chat-container>
+
+    <script src="components/angular/angular.min.js"></script>
+
+    <!-- <script src="chat-module/chat-app.js"></script> -->
+    <script src="chat-module/module.js"></script>
+    <script src="chat-module/provider.js"></script>
+    <script src="chat-module/directives.js"></script>
+
+    <script src="app.js"></script>
+
 </body>
 
 </html>
