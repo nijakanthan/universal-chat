@@ -1,31 +1,54 @@
-chat-container div.chat {
+chat-container .chat-container {
+    padding: 23px 12px 23px 15px;
     position: absolute;
+    white-space: nowrap;
+    z-index: 21;
+    padding-right: 23px;
+}
+
+chat-container .chat-container button.chat {
     border-radius: 50%;
-    box-shadow: 2px 3px 6px #aaa;
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
 }
 
-chat-container div.chat.bottom-right {
-    bottom: 2%;
-    right: 2%;
+chat-container .chat-container button.chat:focus,
+chat-container .chat-container button.chat:active,
+chat-container .chat-container button.chat:hover {
+    outline: none;
 }
 
-chat-container div.chat.top-right {
-    top: 2%;
-    right: 2%;
+chat-container .chat-container button.chat svg {
+    display: block;
+    margin: auto;
+    height: 25px;
+    width: 25px;
 }
 
-chat-container div.chat.bottom-left {
-    bottom: 2%;
-    left: 2%;
+.chat-container.bottom-right {
+    bottom: 0;
+    right: 0;
 }
 
-chat-container div.chat.top-left {
-    top: 2%;
-    left: 2%;
+.chat-container.top-right {
+    top: 0;
+    right: 0;
 }
 
-chat-container div.chat.animated {
+.chat-container.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.chat-container.top-left {
+    top: 0;
+    left: 0;
+}
+
+chat-container button.chat.animated {
     animation-iteration-count: infinite;
     animation-name: unichatbounce;
     transform-origin: center bottom;
