@@ -3,14 +3,20 @@ Universal Chat
 
 Installation
 ------------
-    $ npm install
-    $ bower install
+```shell
+$ npm install
+$ bower install
+```
 
 Build
 -----
-    $ npm run clean
-    $ npm run build
+```shell
+$ npm run clean
+$ npm run build
+```
     
 Run
 ---
-    $ npm start
+```shell
+$ npm start
+```
