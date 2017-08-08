@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="samplechat">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Nijanthan L." content="">
+    <title>Sample Chat</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <!-- Universal Chat CSS -->
+    <link href="css/uni-chat.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body ng-controller="SampleAppController">
+    <h1>Sample Chat</h1>
+    <button ng-click="buttonClickAtoB()">Chat A with B</button>
+    <button ng-click="buttonClickBtoA()">Chat B with A</button>
+
+    <!-- Universal Chat Container -->
+    <uni-chat-container></uni-chat-container>
+
+    <script src="components/angular/angular.min.js"></script>
+    <script src="components/angular-websocket/dist/angular-websocket.min.js"></script>
+
+    <!-- Universal Chat JS -->
+    <script src="js/uni-chat.js"></script>
+
+    <script type="text/javascript">
+        var samplechat = angular.module('samplechat', [
+            'uniChat'
+        ]);
+
+        samplechat.config(['uniChatProvider', function (unichatProvider) {
+            unichatProvider.configure({
+                host: 'localhost:8080',
+                context: 'chatter',
+                positionClass: 'bottom-right',
+                animation: true,
+                bgColor: '#0095FF'
+            });
+        }]);
+
+        samplechat.controller('SampleAppController', ['$scope', 'uniChat', function ($scope, uniChat) {
+            $scope.buttonClickAtoB = function () {
+                uniChat.create({
+                    'sender': {
+                        'username': 'aaaaa',
+                        'fullName': 'Aaaaa Aaaaa'
+                    },
+                    'receiver': {
+                        'username': 'bbbbb',
+                        'fullName': 'Bbbbb Bbbbb'
+                    },
+                    'workItem': {
+                        'id': '00111',
+                        'name': 'Purchase Order'
+                    }
+                });
+            };
+            $scope.buttonClickBtoA = function () {
+                uniChat.create({
+                    'sender': {
+                        'username': 'bbbbb',
+                        'fullName': 'Bbbbb Bbbbb'
+                    },
+                    'receiver': {
+                        'username': 'aaaaa',
+                        'fullName': 'Aaaaa Aaaaa'
+                    },
+                    'workItem': {
+                        'id': '00111',
+                        'name': 'Purchase Order'
+                    }
+                });
+            };
+        }]);
+    </script>
+
+</body>
+
+</html>

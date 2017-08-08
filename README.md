@@ -8,9 +8,8 @@ Installation
 
 Build
 -----
-    $ gulp clean
-    $ gulp js
-    $ gulp css 
+    $ npm run clean
+    $ npm run build
     
 Run
 ---

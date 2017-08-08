@@ -60,3 +60,5 @@ gulp.task('css', function () {
             message: 'CSS minification completed..'
         }));
 });
+
+gulp.task('build', [ 'css', 'js' ]);
