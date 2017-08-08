@@ -1,6 +1,6 @@
 {
   "name": "universal-chat",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "angular module for universal chat",
   "main": "index.js",
   "scripts": {
