@@ -1,6 +1,6 @@
 {
   "name": "universal-chat",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "angular module for universal chat",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nija Kanthan <nijakanthan@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nijakanthan/universal-chat.git"
+  },
+  "keywords": [
+    "angularjs",
+    "angular-websocket",
+    "chat-module"
+  ],
   "license": "MIT",
   "dependencies": {
     "angular": "^1.6.5",
