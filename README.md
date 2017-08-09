@@ -1,5 +1,8 @@
 Universal Chat
 ==============
+Angular module for chat application.
+
+Java websocket application [https://github.com/nijakanthan/chatter.git]
 
 Installation
 ------------
